@@ -1,14 +1,14 @@
 ﻿
-Console.WriteLine("Please select the conventor direction");
-Console.WriteLine("1. From Celcius to Fahrenheit");
-Console.WriteLine("2. From Fahrenheit to Celcius");
+Console.WriteLine("Please select the direction of conversion:");
+Console.WriteLine("1. From Celcious to Fahrenheit");
+Console.WriteLine("2. From Fahrenheit to Celcious");
 Console.WriteLine("3. Exit");
-Console.WriteLine("");
+Console.WriteLine("================================================================");
 
 string? selection = Console.ReadLine();
 double F, C = 0;
 
-while (selection != "3")
+do
 {
     switch (selection)
     {
@@ -24,11 +24,10 @@ while (selection != "3")
             Console.WriteLine("Temperature in Celcious: {0:F2}", C);
             break;
 
-        case "3":
-            break;
-
         default:
-            Console.WriteLine("Please, select a convertor");
+            Console.WriteLine("Please, select a direction of convesion: 1) C => F, 2) F => C, eventualy 3) exit");
             break;
     }
+    selection = Console.ReadLine();
 }
+while (selection != "3");
